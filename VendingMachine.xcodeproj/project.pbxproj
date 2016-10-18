@@ -63,12 +63,12 @@
 				97EC979E1C4E80860081754A /* AppDelegate.swift */,
 				97EC97A01C4E80860081754A /* ViewController.swift */,
 				97EC97B01C4E8C7F0081754A /* VendingItemCell.swift */,
+				A24D40821DB4472E00726936 /* VendingMachine.swift */,
 				97EC97A21C4E80860081754A /* Main.storyboard */,
 				97EC97A51C4E80860081754A /* Assets.xcassets */,
 				97EC97A71C4E80860081754A /* LaunchScreen.storyboard */,
 				97EC97AA1C4E80860081754A /* Info.plist */,
 				97EC97B21C4E9CA90081754A /* VendingInventory.plist */,
-				A24D40821DB4472E00726936 /* VendingMachine.swift */,
 			);
 			path = VendingMachine;
 			sourceTree = "<group>";

@@ -11,7 +11,7 @@ import Foundation
 // Protocols
 
 protocol VendingMachineType {
-    var seleection: [VendingSelection] { get }
+    var selection: [VendingSelection] { get }
     var inventory: [VendingSelection: ItemType] { get set }
     var amountDeposited: Double { get set }
     
@@ -26,6 +26,29 @@ protocol ItemType {
     var price: Double { get }
     var quantity: Double { get set }
     
+}
+
+// Error Types
+
+enum InventoryError: ErrorType {
+    case InvalidResource
+    case ConversionError
+}
+
+//Helper Classes
+
+class PlistConverter {
+    class func dictionaryFromFile(resource: String, ofType type: String) throws -> [String : AnyObject] {
+        
+        guard let path = NSBundle.mainBundle().pathForResource(resource, ofType: type) else {
+            throw InventoryError.InvalidResource
+        }
+        
+        guard let dictionary = NSDictionary(contentsOfFile: path) else {
+            throw InventoryError.ConversionError
+        }
+        
+    }
 }
 
 
